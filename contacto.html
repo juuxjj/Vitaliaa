@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitalia - Contato</title>
+    <!-- Vincular Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vincular CSS Personalizado -->
+    <link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilo para a imagem com o texto centralizado */
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .image-container .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        /* Estilo para o botão de "Fale Conosco" */
+        .btn-fale-conosco {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-fale-conosco:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault(); // Impede o envio tradicional do formulário
+            // Exibe a mensagem de sucesso
+            document.getElementById("mensagem-sucesso").style.display = "block";
+            // Limpa o formulário
+            document.getElementById("formulario-contato").reset();
+        }
+    </script>
+</head>
+<body>
+  <!-- navbar.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/vitalia.png" alt="Logo Vitaliza" height="100" class="me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="sobre.html">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="marmitas.html">Marmitas</a></li>
+                <li class="nav-item"><a class="nav-link text-dark fw-bold" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="btn btn-primary rounded-pill px-4" href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Imagem com texto sobreposto e botão -->
+    <div class="image-container mt-5">
+        <img src="images/contacto.jpg" alt="Imagem Promocional">
+        <a href="#formulario" class="overlay-text btn-fale-conosco">Fala Connosco</a>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <p class="lead">Tens dúvidas ou sugestões? Estamos aqui para ajudar!</p>
+        </div>
+    </header>
+
+    <!-- Seção de Contato -->
+    <section id="formulario" class="contato py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Formulário de Contato -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Envia uma Mensagem</h2>
+                    <form id="formulario-contato" onsubmit="enviarMensagem(event)">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-pill">Enviar Mensagem</button>
+                    </form>
+                    <!-- Mensagem de Sucesso -->
+                    <div id="mensagem-sucesso" class="alert alert-success mt-3" style="display: none;">
+                        A sua mensagem foi enviada com sucesso! Obrigado por entrar em contato.
+                    </div>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Nossos Contatos</h2>
+                    <p><strong>Email:</strong>geralvitalia@gmail.pt</p>
+                    <p><strong>Telefone:</strong>+351 954 646 367</p>
+                    <p><strong>Endereço:</strong> Rua Francisco Xavier,56 2560-096, Lisboa</p>
+                    <div class="mt-4">
+                        <h4 class="fw-bold">Siga-nos</h4>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-dark"><i class="bi bi-facebook fs-3"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-instagram fs-3"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-twitter fs-3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Rodapé -->
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2025 Vitalia. Todos os direitos reservados. | Website para âmbito escolar</p>
+</footer>
+
+<!-- Vincular Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
