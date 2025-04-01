@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vitaliza - Marmitas saudáveis e personalizáveis para o seu estilo de vida.">
+    <meta name="keywords" content="marmitas, saudáveis, personalizadas, alimentação, bem-estar">
+    <meta name="author" content="Vitaliza">
+    <title>Vitalia - Marmitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+    
+	<link rel="stylesheet" href="css/bootstrap-4.4.1.css">
+<link rel="stylesheet" href="css/estilo.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/vitalia.png" alt="Logo Vitaliza" height="100" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="sobre.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="marmitas.html">Marmitas</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-bold" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="btn btn-primary rounded-pill px-4" href="carrinho.html">Carrinho</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section com Carrossel de Imagens -->
+    <section class="hero text-white text-center py-5">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/massa.png" class="d-block w-100" alt="Marmita de massa">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4 fw-bold">Marmitas Saudáveis e Deliciosas</h1>
+                        <p class="lead">Escolhe as tuas refeições favoritas, personalizadas para o teu estilo de vida.</p>
+                        <a href="marmitas.html" class="btn btn-light btn-lg mt-4">Veja as Opções</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/avea2.png" class="d-block w-100" alt="Marmita com aveia">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4 fw-bold">Marmitas Nutritivas para Todos</h1>
+                        <p class="lead">Comida que promove o bem-estar e energia para o teu dia a dia.</p>
+                        <a href="marmitas.html" class="btn btn-light btn-lg mt-4">Vê as Opções</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/frango.png" class="d-block w-100" alt="Marmita de frango">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4 fw-bold">Marmitas Personalizadas para ti</h1>
+                        <p class="lead">Escolhe os ingredientes que mais gostas e tem uma refeição sob medida.</p>
+                        <a href="marmitas.html" class="btn btn-light btn-lg mt-4">Vê as Opções</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+            
+            <!-- Produtos -->
+<section class="produtos py-5 mt-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Refeições</h2>
+        <div class="row g-4">
+            
+            <!-- Marmita 1 - Bolonhesa -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper" data-bs-toggle="modal" data-bs-target="#detalhesModal1">
+                        <img src="images/bolonhesa.png" class="card-img-top" alt="Bolonhesa">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bolonhesa</h5>
+                        <p class="card-text">Uma refeição rica em proteínas e sabor.</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" 
+                                data-name="Bolonhesa" 
+                                data-price="11,95€">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal para Detalhes da Marmita 1 -->
+            <div class="modal fade" id="detalhesModal1" tabindex="-1" aria-labelledby="detalhesModalLabel1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detalhesModalLabel1">Detalhes da Marmita - Bolonhesa</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Ingredientes:</strong> Carne moída, molho de tomate, cebola, alho, especiarias.</p>
+                            <p><strong>Calorias:</strong> 350 kcal por porção.</p>
+                            <p><strong>Benefícios:</strong> Alta proteína, baixo carboidrato.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary add-to-cart" 
+                                    data-name="Bolonhesa" 
+                                    data-price="11,95€" data-bs-dismiss="modal">
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marmita 2 - Feijoada -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper" data-bs-toggle="modal" data-bs-target="#detalhesModalFeijoada">
+                        <img src="images/feijoada.png" class="card-img-top" alt="Feijoada">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Feijoada</h5>
+                        <p class="card-text">Feijoada tradicional com ingredientes frescos.</p>
+                        <button class="btn btn-primary btn-lg mt-3 add-to-cart" data-name="Feijoada" data-price="15.00€">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal para Detalhes da Marmita 2 -->
+            <div class="modal fade" id="detalhesModalFeijoada" tabindex="-1" aria-labelledby="detalhesModalLabelFeijoada" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detalhesModalLabelFeijoada">Detalhes da Marmita - Feijoada</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>Ingredientes:</strong> Feijão preto, carne de porco e arroz.</p>
+                            <p><strong>Calorias:</strong> 450 kcal por porção.</p>
+                            <p><strong>Benefícios:</strong> Rico em fibras, proteína e ferro.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-primary add-to-cart" data-name="Feijoada" data-price="15.00€" data-bs-dismiss="modal">
+                                Adicionar ao Carrinho
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+
+            <!-- Marmita 3 - Peixe com batatas -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper" data-bs-toggle="modal" data-bs-target="#detalhesModalPeixe">
+                        <img src="images/peixe.png" class="card-img-top" alt="Peixe com batatas">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Peixe com batatas</h5>
+                        <p class="card-text">Leve, saudável e delicioso!</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" data-name="Peixe com batatas" data-price="10.00€">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marmita 4 - Hamburguer com Esparguete -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper" data-bs-toggle="modal" data-bs-target="#detalhesModalHamburguer">
+                        <img src="images/hambuergue.png" class="card-img-top" alt="Hamburguer com esparguete">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hamburguer com esparguete</h5>
+                        <p class="card-text">Sabor e energia!</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" data-name="Hamburguer com esparguete" data-price="11.00€">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marmita 5 - Lasanha com brócolos -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/lasanha.png" class="card-img-top" alt="Lasanha com brócolos">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lasanha com brócolos</h5>
+                        <p class="card-text">Cremosa, saudável e irresistível.</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" data-name="Lasanha com brócolos" data-price="10.95€">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marmita 6 - Bife de peru com massa -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/mass.png" class="card-img-top" alt="Bife de peru com massa">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bife de peru com massa</h5>
+                        <p class="card-text">Simples e delicioso.</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" data-name="Bife de peru com massa" data-price="9.95€">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marmita 7 - Peixe grelhado -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/peixe.png" class="card-img-top" alt="Peixe grelhado">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Peixe grelhado</h5>
+                        <p class="card-text">Peixe grelhado acompanhado de batatas.</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" data-name="Peixe grelhado" data-price="15.00€">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marmita 8 - Wrap de alface e frutos vermelhos -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto refeicoes">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/veganco.png" class="card-img-top" alt="Wrap de alface e frutos vermelhos">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Wrap de alface e frutos vermelhos</h5>
+                        <p class="card-text">Delicioso e prático</p>
+                        <button class="btn btn-primary btn-lg add-to-cart" data-name="Wrap de alface e frutos vermelhos" data-price="7.95€">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+	<!-- Lanches -->
+<section class="lanches py-5 mt-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Lanches</h2>
+        <div class="row g-4">
+            <!-- Lanche 1 - Sanduíche de Frango -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto lanches">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/ovosabacate.png" class="card-img-top" alt="Sanduíche de Frango">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ovos com abacate</h5>
+                        <p class="card-text">Sabor e nutrição em um só prato.</p>
+                        <button class="btn btn-primary btn-lg mt-3 add-to-cart" 
+                                data-name="Ovos com abacate" 
+                                data-price="12.00€">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lanche 2 - Hambúrguer -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto lanches">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/brigadeiros.png" class="card-img-top" alt="Hambúrguer">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Brigadeiros proteicos</h5>
+                        <p class="card-text">O doce saudável que combina sabor e energia.</p>
+                        <button class="btn btn-primary btn-lg mt-3 add-to-cart" 
+                                data-name="Brigadeiros proteicos" 
+                                data-price="7.00€">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lanche 3 - cookies -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto lanches">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/cookie.png" class="card-img-top" alt="Wrap de Frango">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Cookies</h5>
+                        <p class="card-text">Leves e deliciosas.</p>
+                        <button class="btn btn-primary btn-lg mt-3 add-to-cart" 
+                                data-name="Cookies" 
+                                data-price="8.00€">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lanche 4 - Pão de Queijo -->
+            <div class="col-lg-3 col-md-4 col-sm-6 produto lanches">
+                <div class="card shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="images/panquecas.png" class="card-img-top" alt="Pão de Queijo">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Panquecas com moraangos</h5>
+                        <p class="card-text">Sabor irresistível.</p>
+                        <button class="btn btn-primary btn-lg mt-3 add-to-cart" 
+                                data-name="Panquecas com morangos" 
+                                data-price="12.00€">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = parseFloat(this.getAttribute('data-price'));
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                cart.push({ name, price });
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`${name} foi adicionado ao carrinho!`);
+            });
+        });
+    </script>
+			 <!-- Rodapé -->
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2025 Vitalia. Todos os direitos reservados. | Website para âmbito escolar</p>
+</footer>
+
+<!-- Vincular Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
